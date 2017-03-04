@@ -1,0 +1,8 @@
+**/Debug/**
+**/Release/**
+**/obj/
+/Handson/.vs/Handson/v14/*.suo
+/Handson/Handson/Debug/*.idb
+/Handson/Handson/Debug/Handson.tlog
+/Handson/Handson.opensdf
+/Handson/Handson.sdf
