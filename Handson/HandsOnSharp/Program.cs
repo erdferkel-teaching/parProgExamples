@@ -67,9 +67,21 @@ namespace HandsOnSharp
             Console.WriteLine(leaky.Count); // prevent optimization
         }
 
+        static void Oversubscription()
+        {
+            for (int i = 0; i < (Environment.ProcessorCount * 4); i++)
+            {
+                new Thread(() => {            
+                    // Do work             
+                    for (int j = 0; j < 1000000000; j++) ;
+                }).Start();
+            }
+        }
+
         static void Main(string[] args)
         {
-            ClassOOP();
+            //ClassOOP();
+            Oversubscription();
         }
     }
 }
