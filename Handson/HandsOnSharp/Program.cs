@@ -10,6 +10,7 @@ namespace HandsOnSharp
     {
         static void Main(string[] args)
         {
+            Pi.TestPi(args);
         }
     }
 }
