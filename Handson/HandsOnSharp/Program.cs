@@ -80,9 +80,10 @@ namespace HandsOnSharp
 
         static void Main(string[] args)
         {
+            MapReduceHandsOn.Test();
             //ClassOOP();
             //Oversubscription();
-            TaskParallelism.Test();
+            //TaskParallelism.Test();
         }
     }
 }
