@@ -1,9 +1,11 @@
-﻿let mapReduce m selector reduce xs =
-    xs |> Seq.collect m |> Seq.groupBy selector |> Seq.collect reduce
-    
-let mapReduce2 (m : 's -> seq<'m>) (selector : 'm -> 'k) (reduce : 'k*seq<'m> -> seq<'r>) (xs : seq<'s>) =
+﻿let mapReduce2 (m : 's -> seq<'m>) (selector : 'm -> 'k) (reduce : 'k*seq<'m> -> seq<'r>) (xs : seq<'s>) =
     xs |> Seq.collect m |> Seq.groupBy selector |> Seq.collect reduce
 
+// need no types
+let mapReduce m selector reduce xs =
+    xs |> Seq.collect m |> Seq.groupBy selector |> Seq.collect reduce
+
+// make parallel
 open FSharp.Collections.ParallelSeq
 let mapReduceP m selector reduce xs =
     xs |> PSeq.collect m |> PSeq.groupBy selector |> PSeq.collect reduce
