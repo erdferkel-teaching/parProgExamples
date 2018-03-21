@@ -80,8 +80,12 @@ namespace HandsOnSharp
 
         static void Main(string[] args)
         {
+            Quicksort.Run();
             //ClassOOP();
             //Oversubscription();
+            TaskParallelism.Test();
+            TaskParallelism.Test();
+            TaskParallelism.Test();
             TaskParallelism.Test();
         }
     }

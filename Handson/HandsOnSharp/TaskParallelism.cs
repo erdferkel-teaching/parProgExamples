@@ -22,7 +22,7 @@ namespace HandsOnSharp
                 var t = new Tree<int>();
                 t.Left = null;
                 t.Right = null;
-                t.Data = r.Next(8, 18);
+                t.Data = r.Next(8, 20);
                 return t;
             }
             else
